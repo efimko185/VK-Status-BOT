@@ -3,8 +3,6 @@ from datetime import datetime
 from time import sleep
 import options as o
 
-dat = ''
-
 def date():
 	global dat
 	dat = datetime.strftime(datetime.now(), "[%Y.%m.%d][%H:%M:%S]")
@@ -50,4 +48,6 @@ while True:
 	except Exception:
 		date()  
 		print('{}[Ошибка обновления статуса!]'.format(dat))
-	sleep(52)
+	sleep(o.timer)
+	date()
+	print('{}[Сплю.][{} сек.]'.format(dat, o.timer))
