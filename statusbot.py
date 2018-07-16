@@ -48,6 +48,6 @@ while True:
 	except Exception:
 		date()  
 		print('{}[Ошибка обновления статуса!]'.format(dat))
-	sleep(o.timer)
 	date()
 	print('{}[Сплю.][{} сек.]'.format(dat, o.timer))
+	sleep(o.timer)
