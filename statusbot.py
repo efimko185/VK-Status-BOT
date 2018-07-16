@@ -32,12 +32,12 @@ while True:
 		res = client.query(wf)
 		date()   
 		print('{}[Погода получена!]'.format(dat))
+		answer = next(res.results).text
+		weather = answer[14:19]
 	except Exception:
 		date()   
 		print('{}[Ошибка получения погоды!]'.format(dat))
 
-	answer = next(res.results).text
-	weather = answer[14:19]
 	text = 'Текущее время: {} | Погода в {}: {}'.format(tim, o.city2, weather)
 	try:
 		date()  
